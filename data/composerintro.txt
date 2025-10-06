@@ -1,0 +1,12 @@
+Beethoven|A German composer and pianist. One of the most revered figures in the history of Western music.
+Mozart|A prolific and influential composer of the Classical period.
+Robert Schumann|A German composer, pianist, and music critic of the early Romantic era.
+Mendelssohn|A German composer, pianist, organist and conductor of the early Romantic period.
+Macdowell|An American composer and pianist of the late Romantic period.
+Johann Sebastian Bach|A German composer and musician of the late Baroque period.
+Dmitri Kabalevsky|A Soviet composer, conductor, pianist and pedagogue of Russian gentry descent.
+Frédéric Chopin|A Polish composer and virtuoso pianist of the Romantic period who wrote primarily for solo piano.
+Johannes Brahms|A German composer, virtuoso pianist, and conductor of the mid-Romantic period.
+Aram Khachaturian|A Soviet Armenian composer and conductor.
+Samuel Barber|An American composer, pianist, conductor, baritone, and music educator, and one of the most celebrated composers of the mid-20th century.
+Sergei Rachmaninoff|A Russian composer, virtuoso pianist, and conductor.

@@ -1,0 +1,137 @@
+body {
+  background-image: url('musbackground.jpg');
+  background-repeat: no-repeat; 
+  background-size: cover;
+}
+h1 {
+  text-align: center;
+  color: rgb(46, 4, 4);
+  font-family: cursive;
+  font-size: 40px;
+}
+h3 {
+  text-align: center;
+  color: rgb(27, 16, 81);
+  font-family: cursive;
+  font-size: 24px;
+}
+
+.image-grid {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #ccc;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.image-grid img {
+  width: 480px;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Container for the tab buttons */
+.tab-container {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #ccc;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  margin-left: 3px;
+  cursor: pointer;
+  background-color: lightgrey;
+  border: none;
+  border-right: 1px solid #ccc;
+  outline: none;
+  transition: background-color 0.3s;
+  color: rgb(46, 4, 4);
+  width: 200px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.tab-button:hover {
+  background-color: #ddd;
+}
+
+.tab-button.active {
+  background-color: #fff;
+  border-bottom: 2px solid white;
+}
+
+/* Content for each tab */
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+p {
+  text-align: center;
+  font-size: 16px;
+  color: red;
+  opacity: 0.8;
+}
+ul {
+  text-align: left; 
+  max-width: 600px; 
+  margin: auto;
+}
+footer {
+  text-align: center;
+  display: block;
+}
+.videolib-span {
+  color: blue;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 24px;
+}
+th, td {
+  text-align: left; 
+  max-width: 800px; 
+  margin: auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table {
+  text-align: left; 
+  width: 1000px; 
+  margin: auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table.filters, table.filters th, table.filters td {
+  font-size: 20px;
+  color:rgb(114, 30, 46);
+  border: none;
+  padding-right: 16px;
+  padding-bottom: 8px;
+}
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center-container table {
+  margin-top: 10px;
+}
+.filterSelect {
+  width: 200px;
+}
+.select-category {
+  font-size: 16px;
+  color:rgb(46, 4, 4);
+  font-weight: bold;
+  padding-right: 16px;
+  padding-bottom: 8px;
+} 

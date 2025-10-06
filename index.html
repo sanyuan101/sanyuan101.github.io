@@ -1,16 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="videolib.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Eric's Art Gallary</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-  <h1>Eric's Art Galary</h1>
-  <p>What is new? Created new page for art gallary and moved video libs to a new <a href="
-    ./videolib.html" target="_blank">page</a>.  Please come back next week for new features.</p>
-  <iframe width="420" height="315" src="https://www.youtube.com/embed/9cOgEm4hJdY"></iframe>
+
+  <h1>Eric's Art Gallary</h1>
+
+  <!-- Load script -->
+  <script src="scripts/tabutil.js"></script>
+
+  <div class="tab-container">
+    <button class="tab-button active" onclick="openTab(event, 'content-photo')">Photos</button>
+    <button class="tab-button" onclick="openTab(event, 'content-performance')">Performance Videos</button>
+    <button class="tab-button" onclick="openTab(event, 'content-other')">Other Videos</button>
+  </div>
+
+  <div id="content-photo" class="tab-content active">
+    <h3>Photo Gallary</h3>
+    <div id="photodiv" class="image-grid">
+    <!-- Load script -->
+    <script src="scripts/photogallary.js"></script>
+    <!-- Call function after script is loaded -->
+    <script>
+      loadPhotos(); // Call the function to load and display the photos
+    </script>
+    </div>
+  </div>
+
+  <div id="content-performance" class="tab-content">
+    <h3>Performance Videos</h3>
+    <p>This tab is still under construction.</p>
+  </div>
+
+  <div id="content-other" class="tab-content">
+    <h3>Video Recording Library</h3>
+    <div class="center-container">
+      <table class="filters">
+        <tr>
+          <td><span class="select-category">Year: </span></td>
+          <td>
+            <select id="yearDropdown" name="yearOption" class="filterSelect">
+              <option value="all" selected>all</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+            </select>
+          </td>
+          <td><span class="select-category">Instrument: </span></td>
+          <td>
+            <select id="instrumentDropDown" name="instrumentOption" class="filterSelect">
+              <option value="all" selected>all</option>
+              <option value="Piano">Piano</option>
+              <option value="Violin">Violin</option>
+              <option value="Multiple">Multiple</option>
+            </select>
+          </td>
+          <td><span class="select-category">Composer: </span></td>
+          <td>
+            <select id="composerDropDown" name="composerOption" class="filterSelect">
+              <option value="all" selected>all</option>
+              <option value="Beethoven">Beethoven</option>
+              <option value="Mozart">Mozart</option>
+              <option value="Robert Schumann">Robert Schumann</option>
+              <option value="Mendelssohn">Mendelssohn</option>
+              <option value="Macdowell">Macdowell</option>
+              <option value="Johann Sebastian Bach">Johann Sebastian Bach</option>
+              <option value="Dmitri Kabalevsky">Dmitri Kabalevsky</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+
+    <table id="videoListTable">
+    </table>
+    <!-- Load script -->
+    <script src="scripts/videolib.js"></script>
+
+    <!-- Call function after script is loaded -->
+    <script>
+      loadVideoLinks(); // Call the function to load and display the video links
+    </script>
+  </div>
+
+
 </body>
+
 <footer>
   Author: Eric Zhang <a href="mailto:eric.2007.zhang@gmail.com">eric.2007.zhang@gmail.com</a>
 </footer>
