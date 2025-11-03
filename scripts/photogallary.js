@@ -1,23 +1,3 @@
-async function loadDataFromFile() {
-  try {
-    const response = await fetch('data/photos.txt');
-    if (!response.ok) {
-      throw new Error('Failed to fetch photos.txt');
-    }
-    return await response.text();
-  } catch (error) {
-    console.error('Error loading photo file names:', error);
-    return null;
-  }
-}
-
-function loadArrayFromData(data) {
-  return data
-    .split('\n')
-    .map(link => link.trim())
-    .filter(link => link);
-}
-
 function getPhotoInfo(data) {
   const inforElements = data.split('|');
   return {
@@ -27,7 +7,7 @@ function getPhotoInfo(data) {
 }
 
 async function loadPhotos() {
-  const photosData = await loadDataFromFile();
+  const photosData = await loadDataFromFile('photos.txt');
   if (!photosData) {
     console.error('No data loaded from file.');
     return;

@@ -1,36 +1,3 @@
-async function loadVideoDataFromFile() {
-  try {
-    const response = await fetch('data/videolinks.txt');
-    if (!response.ok) {
-      throw new Error('Failed to fetch videolinks.txt');
-    }
-    return await response.text();
-  } catch (error) {
-    console.error('Error loading video links:', error);
-    return null;
-  }
-}
-
-async function loadComposerDataFromFile() {
-  try {
-    const response = await fetch('data/composerintro.txt');
-    if (!response.ok) {
-      throw new Error('Failed to fetch composerintro.txt');
-    }
-    return await response.text();
-  } catch (error) {
-    console.error('Error loading composer intro:', error);
-    return null;
-  }
-}
-
-function loadArrayFromData(data) {
-  return data
-    .split('\n')
-    .map(link => link.trim())
-    .filter(link => link);
-}
-
 function getVideoInfo(data) {
   const inforElements = data.split('|');
   return {
@@ -54,7 +21,7 @@ function getSelectedFilters() {
 async function loadVideoLinks() {
 
   /* Load video links from text file */
-  const linksData = await loadVideoDataFromFile();
+  const linksData = await loadDataFromFile('videolinks.txt');
   if (!linksData) {
     console.error('No data loaded from video link file.');
     return;
@@ -63,7 +30,7 @@ async function loadVideoLinks() {
   const videoLinks = loadArrayFromData(linksData);
 
   /* Load composer intro from text file */
-  const composerInfo = await loadComposerDataFromFile();
+  const composerInfo = await loadDataFromFile('composerintro.txt');
   if (!composerInfo) {
     console.error('No data loaded from composer intro file.');
     return;
