@@ -12,6 +12,7 @@
 
   <!-- Load script -->
   <script src="scripts/tabutil.js"></script>
+  <script src="scripts/commonutil.js"></script>
 
   <div class="tab-container">
     <button class="tab-button active" onclick="openTab(event, 'content-photo')">Photos</button>
@@ -33,7 +34,25 @@
 
   <div id="content-performance" class="tab-content">
     <h3>Performance Videos</h3>
-    <p>This tab is still under construction.</p>
+
+    <div id="videodiv" class="video-container">
+      <!--
+      <div class="Performancevideo">
+        <p class="performanceTitle">Eric Piano Performance</p>
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+      </div>
+      <div class="Performancevideo">
+        <p class="performanceTitle">Eric Violin Performance</p>
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+      </div>
+      -->
+      <!-- Load script -->
+    <script src="scripts/performancevideo.js"></script>
+    <!-- Call function after script is loaded -->
+    <script>
+      loadVideos(); // Call the function to load and display the photos
+    </script>
+    </div>
   </div>
 
   <div id="content-other" class="tab-content">
